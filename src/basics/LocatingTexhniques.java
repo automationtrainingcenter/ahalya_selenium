@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
  * name - name attribute value of the element tag
  * link text - complete text in between opening and closing a(anchor) tag
  * partial link text - part of the text in between opening and closing a(anchor) tag
- * xpath - xml path - //tagname{@attributename = 'attribute value']
+ * xpath - xml path - //tagname[@attributename = 'attribute value']
  * css selector - tagname[attribute_name = 'attribute value']]
  * tag name - name of the element tag
  * class name - class attribute value
