@@ -6,11 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class FramesHandling {
-	public static void main(String[] args) {
-		System.setProperty("webdriver.chrome.driver", "E:\\selenium\\softwares\\drivers\\chromedriver.exe");
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", ".//drivers//chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get("file:///E:/SSTS/dharani/selenium_workspace/selenium_basics/frames/framesDemo.html");
+		driver.get("file:///C:\\Users\\Ahalya\\Documents\\course_workspace\\ahalya_selenium\\frames");
 		driver.manage().window().maximize();
+		
+		Thread.sleep(2000);
 
 		/*
 		 * frames are used to display the web page with in a web page To work with
@@ -19,6 +21,7 @@ public class FramesHandling {
 		 */
 
 		// locate all the frames inside the page
+		
 
 		/******************* we want to automate frame 2 *******************/
 		// switch focus to main page

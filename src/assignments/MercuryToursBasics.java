@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class MercuryToursBasics 
 {
@@ -36,6 +37,9 @@ public class MercuryToursBasics
 		stateField.sendKeys("Telangana");
 		WebElement postCodeField = driver.findElement(By.name("postalCode"));
 		postCodeField.sendKeys("500014");
+		WebElement dropDownField = driver.findElement(By.name("country"));
+		Select country1 = new Select(dropDownField);
+		country1.selectByVisibleText("INDIA ");
 		WebElement userNameField = driver.findElement(By.name("email"));
 		userNameField.sendKeys("Cherry@123");
 		WebElement passwordField = driver.findElement(By.name("password"));
@@ -44,6 +48,8 @@ public class MercuryToursBasics
 		ConfirmPasswordField.sendKeys("Cherry1@123");
 		WebElement submitButton = driver.findElement(By.name("register"));
 		submitButton.click();
+		driver.close();
+		
 		
 		
 		
