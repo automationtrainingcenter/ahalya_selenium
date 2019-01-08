@@ -20,6 +20,7 @@ public class FramesHandling {
 		Thread.sleep(2000);
 //		switch the focus to frame which you want to automate
 		driver.switchTo().frame("courses-iframe");
+		Thread.sleep(4000);
 //		now focus is in frame 
 //		inside the frame locate search field and fill the data
 		driver.findElement(By.id("search-courses")).sendKeys("java");
