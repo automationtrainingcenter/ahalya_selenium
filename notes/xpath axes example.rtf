@@ -1,0 +1,40 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww15560\viewh13460\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs28 \cf0 To locate div tag with id = content in the following url  \'93http://demoqa.com/registration/\'93
+\b0 \
+\
+1. //div[@id='content']\
+\
+2. //div[@class='site-content container']\
+\
+3. //div[contains(@id,'cont')]\
+\
+4. //div[starts-with(@id,'cont')]\
+\
+5. //div[@id='page']/div\
+\
+6. //div[@id='page']//div[contains(@class,'site-content')]\
+\
+7. (//div[@id='page']//div)[position()=4]\
+\
+8. (//div[@id='page']//div)[4]\
+\
+9. //div[@id='page']/child::div\
+\
+10. //div[@id='page']/descendant::div[4]\
+\
+11. //div[@id='page']/child::header/following-sibling::div\
+\
+12. //div[@id='page']/child::footer/preceding-sibling::div\
+\
+13. //footer/preceding-sibling::div\
+\
+14. //ol[@id='breadcrumbs']/parent::div\
+\
+15. //header[@id='masthead']/following-sibling::div \
+}
