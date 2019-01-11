@@ -21,6 +21,12 @@ public class BrowserHelper {
 		}
 		driver.get(url);
 		driver.manage().window().maximize();
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	public static WebElement locateElement(String by, String using) {
@@ -40,7 +46,7 @@ public class BrowserHelper {
 		case "css":
 			byUsing = By.cssSelector(using);
 			break;
-		case "linkText":
+		case "linktext":
 			byUsing = By.partialLinkText(using);
 			break;
 		default:
@@ -51,6 +57,12 @@ public class BrowserHelper {
 	}
 
 	public static void closeBrowser() {
+		try {
+			Thread.sleep(4000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		if (driver.getWindowHandles().size() > 1) {
 			driver.quit();
 		} else {
