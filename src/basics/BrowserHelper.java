@@ -1,5 +1,9 @@
 package basics;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,6 +13,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class BrowserHelper {
 	protected static WebDriver driver;
 
+	// get system date and time
+	public static String getDate() {
+		Date date = new Date();
+		DateFormat df = new SimpleDateFormat("yyyy-MMM-dd_HH-mm-ss_z");
+		return df.format(date);
+	}
+	
 	public static void launch(String browserName, String url) {
 		if (browserName.equalsIgnoreCase("chrome")) {
 			System.setProperty("webdriver.chrome.driver", ".//drivers//chromedriver.exe");
