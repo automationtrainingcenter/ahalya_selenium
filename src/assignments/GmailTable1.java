@@ -4,17 +4,21 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class GmailTable1 
+import basics.BrowserHelper;
+
+public class GmailTable1 extends BrowserHelper
 {
 	public static void main(String[] args) throws InterruptedException
 	{
-		System.setProperty("webdriver.chrome.driver",".//drivers//chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://mail.google.com/mail/u/1/?tab=wm#inbox");
-		driver.findElement(By.id("yDmH0d")).sendKeys("emailme.ahalya548@gmail.com");
-//		driver.findElement(By.cssSelector(cssSelector))
-		Thread.sleep(3000);
-		driver.close();
+		launch("chrome", "https://accounts.google.com");
+		locateElement("id", "identifierId").sendKeys("chowdaryahalya5@gmail.com");
+		locateElement("xpath", "//span[contains(text(),'Next')]").click();
+		Thread.sleep(2000);
+		locateElement("name", "password").sendKeys("Ahi@1234");
+		locateElement("xpath", "//span[contains(text(),'Next')]").click();
+		Thread.sleep(2000);
+//		locateElement("xpath", "//a[contains(text(),'Gmail')]").click();
+		closeBrowser();
 		
 	}
 
