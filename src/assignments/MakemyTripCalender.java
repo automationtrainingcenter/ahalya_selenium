@@ -17,7 +17,7 @@ public class MakemyTripCalender extends BrowserHelper
 		launch("chrome", "https://www.makemytrip.com");
 		locateElement("id", "hp-widget__depart").click();
 		Thread.sleep(2000);
-		WebElement calender = locateElement("xpath", "(//table[@class = 'ui-datepicker-calendar'])[2]//a[contains(@class, 'ui-state-default ui-state-active')]");
+		WebElement calender = locateElement("xpath", "(//table[@class = 'ui-datepicker-calendar'])[2]");
 		Thread.sleep(2000);
 		List<WebElement> rows = calender.findElements(By.tagName("tr"));
 		for (WebElement row : rows) {
@@ -26,7 +26,7 @@ public class MakemyTripCalender extends BrowserHelper
 				if (date.getText().contains(departdate)) {
 					System.out.println(date.getText());
 					status = true;
-					date.findElement(By.tagName("button")).click();
+					date.findElement(By.tagName("a")).click();
 					break;
 				}
 
