@@ -13,5 +13,13 @@
 	<classpathentry kind="lib" path="E:/selenium-java-3.14.0/libs/httpcore-4.4.9.jar"/>
 	<classpathentry kind="lib" path="E:/selenium-java-3.14.0/libs/okhttp-3.10.0.jar"/>
 	<classpathentry kind="lib" path="E:/selenium-java-3.14.0/libs/okio-1.14.1.jar"/>
+	<classpathentry kind="lib" path="E:/sikuli/sikulixapi.jar"/>
+	<classpathentry kind="lib" path="E:/extentReports/bson-3.0.4.jar"/>
+	<classpathentry kind="lib" path="E:/extentReports/extentreports-2.41.2.jar"/>
+	<classpathentry kind="lib" path="E:/extentReports/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="E:/extentReports/jsoup-1.8.3.jar"/>
+	<classpathentry kind="lib" path="E:/extentReports/mongodb-driver-3.0.4.jar"/>
+	<classpathentry kind="lib" path="E:/extentReports/mongodb-driver-core-3.0.4.jar"/>
+	<classpathentry kind="lib" path="E:/extentReports/sqlite-jdbc-3.8.11.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
